@@ -1,22 +1,14 @@
-package com.sparta.firstspring.model;
+package com.sparta.firstspring.entities;
+import jakarta.persistence.*;
+import java.time.Instant;
 
-import jakarta.persistence.*;  // the people that are doing the persistence
-
-import java.time.Instant; // more precision than the Date class.
-
-// jpa annotation that tells spring this class Actor is representing an entity in a table.
 @Entity
-// this annotation @Table tells which table this class is associated with.
 @Table(name = "actor")
-public class Actor { // Class Actor models table Actor in the Database. So, the Repository takes
-                    // this model and exchange data with the Database.
-
-    // this annotation @Id tells spring this is the primary key of the table.
+public class Actor {
     @Id
-    // @GeneratedValue tells the Spring who is generating the Id is IDENTITY, meaning the database.
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "actor_id", columnDefinition = "SMALLINT UNSIGNED not null")
-    private Integer id; // this is the property id that maps to the actor_id column in the database.
+    private Integer id;
 
     @Column(name = "first_name", nullable = false, length = 45)
     private String firstName;
@@ -59,7 +51,6 @@ public class Actor { // Class Actor models table Actor in the Database. So, the 
         this.lastUpdate = lastUpdate;
     }
 
-
     @Override
     public String toString() {
         return "Actor{" +
@@ -69,4 +60,6 @@ public class Actor { // Class Actor models table Actor in the Database. So, the 
                 ", lastUpdate=" + lastUpdate +
                 '}';
     }
+
 }
+
