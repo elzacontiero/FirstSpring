@@ -36,11 +36,16 @@ public class StaffTests {
     @Test
     void testNameLengthQueries() {
         List<Staff>list = repo.findAllStaffWithShortNames();
+        System.out.println(list);
         Assertions.assertTrue(list.size() ==1);
 
-        List<Staff> result = repo.findAllStaffWithLongNameUsingSQL();
-        System.out.println(result);
-        Assertions.assertTrue(result.size() == 1);
+        List<Staff> longList = repo.findAllStaffWithLongNameUsingSQL();
+        System.out.println(longList);
+        Assertions.assertTrue(longList.size() == 1);
+
+        List<Staff> longList1 = repo.findAllStaffWithLongNameUsingSQL(3);
+        System.out.println(longList1);
+        Assertions.assertTrue(longList1.size() == 1);
     }
 
 }
