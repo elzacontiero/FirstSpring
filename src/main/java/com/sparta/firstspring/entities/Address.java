@@ -88,10 +88,5 @@ public class Address {
         this.lastUpdate = lastUpdate;
     }
 
-/*
-    TODO [JPA Buddy] create field to map the 'location' column
-     Available actions: Define target Java type | Uncomment as is | Remove column mapping
-    @Column(name = "location", columnDefinition = "GEOMETRY(65535) not null")
-    private Object location;
-*/
+
 }

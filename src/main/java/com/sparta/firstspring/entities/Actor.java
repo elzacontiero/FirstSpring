@@ -6,7 +6,7 @@ import java.time.Instant;
 @Table(name = "actor")
 public class Actor {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Identity is to say this id is generated in the database.
     @Column(name = "actor_id", columnDefinition = "SMALLINT UNSIGNED not null")
     private Integer id;
 
