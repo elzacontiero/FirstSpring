@@ -2,11 +2,12 @@ package com.sparta.firstspring.entities;
 import jakarta.persistence.*;
 import java.time.Instant;
 
-@Entity
-@Table(name = "actor")
+@Entity // Tells JPA that the class that follows is an Entity (a class that map to a table)
+@Table(name = "actor") // Instruct which table this class is mapping.
 public class Actor {
-    @Id
+    @Id // Tells JPA that this property should be treated as the primary key for the object-table
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Identity is to say this id is generated in the database.
+    // Instruct which column in the database  this id is mapping:
     @Column(name = "actor_id", columnDefinition = "SMALLINT UNSIGNED not null")
     private Integer id;
 
@@ -51,6 +52,7 @@ public class Actor {
         this.lastUpdate = lastUpdate;
     }
 
+    /* Overrides the Object.toString() method */
     @Override
     public String toString() {
         return "Actor{" +

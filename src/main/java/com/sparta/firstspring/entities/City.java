@@ -15,6 +15,10 @@ public class City {
     @Column(name = "city", nullable = false, length = 50)
     private String city;
 
+    /*
+        This is a reference to another entity: Country.
+        And is a ManyToOne: many Cities to One country.
+     */
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "country_id", nullable = false)
     private Country country;
