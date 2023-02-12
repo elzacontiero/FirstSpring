@@ -15,7 +15,7 @@ public interface ActorRepository extends JpaRepository<Actor, Integer> {
 
     // we can customise methods and add more like the one below. it will become queries to
     // the database, like findByLastName
-    List<Actor> findByLastName(String lastName); //method findByLastName and returns the list of Actors.
+    List<Actor> findByLastName(String lastName); //method findByLastName returns the list of Actors.
                                                 // It transforms the findByLastName parameter into a SQL internally
                                                //and sends it to the database and get back result as a list of actors.
 }

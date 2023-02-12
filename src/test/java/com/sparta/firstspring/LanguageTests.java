@@ -10,17 +10,10 @@ import java.time.Instant;
 import java.util.Optional;
 import jakarta.transaction.Transactional;
 
-/*
-The annotation @Transactional below fixes error
-    [ERROR] testStaffAddress  Time elapsed: 3.46 s  <<< ERROR!
-    org.hibernate.LazyInitializationException: could not initialize proxy [com.sparta.firstspring.entities.Address#3] - no Session
-            at com.sparta.firstspring.StaffTests.testStaffAddress(StaffTests.java:22)
-Got the anwer from
-    https://stackoverflow.com/questions/21574236/how-to-fix-org-hibernate-lazyinitializationexception-could-not-initialize-prox#32276916
- */
+
 @Transactional
 @SpringBootTest
-public class LanguageTest {
+public class LanguageTests {
 
     @Autowired
     private LanguageRepository repo;
