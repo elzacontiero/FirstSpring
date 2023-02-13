@@ -1,7 +1,6 @@
 package com.sparta.firstspring.repositories;
 
 import com.sparta.firstspring.entities.Film;
-import com.sparta.firstspring.entities.Staff;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

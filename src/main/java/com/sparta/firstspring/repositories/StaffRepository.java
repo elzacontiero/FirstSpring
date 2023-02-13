@@ -18,5 +18,7 @@ public interface StaffRepository extends JpaRepository<Staff, Short> {
 
     @Query(value = "SELECT * FROM staff s WHERE LENGTH (s.username) >:usernameLength", nativeQuery = true)
     List<Staff> findAllStaffWithLongNameUsingSQL(Integer usernameLength);
+
+    List<Staff> findByFirstNameAndLastName(String firstName, String lastName);
 }
 
